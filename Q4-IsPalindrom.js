@@ -5,4 +5,4 @@ function isPalindrom(str) {
   return str === reverse;
 }
 
-console.log(isPalindrome('madam'));
+console.log(isPalindrom('madam'));

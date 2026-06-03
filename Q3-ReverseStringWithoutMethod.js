@@ -1,8 +1,8 @@
 
 function reverseString(str) {
-  const reverse = "";
+  let reverse = "";
 
-  for(let i = length.str - 1; i>=0; i--) {
+  for(let i = str.length - 1; i>=0; i--) {
     reverse += str[i];
   }
   return reverse;

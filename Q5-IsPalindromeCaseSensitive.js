@@ -1,6 +1,6 @@
 
 function isPalindrome(str) {
-  let toLowerCase = str.ToLowerCase();
+  let toLowerCase = str.toLowerCase();
 
   let palindrome = toLowerCase.split('').reverse().join('');
 

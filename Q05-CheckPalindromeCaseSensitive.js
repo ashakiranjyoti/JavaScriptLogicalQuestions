@@ -1,67 +1,40 @@
-// Question:
-// Write a JavaScript program to check whether a given string is a palindrome
-// (case-insensitive).
+let str = "MaDam";
 
-// A palindrome reads the same forward and backward.
-// Examples:
-// "madam"  → true
-// "MaDam"  → true (after converting to lowercase)
-// "hello"  → false
+str = str.toLowerCase();
 
-function isPalindrome(str) {
+let reverse = str.split('').reverse().join('');
 
-    // Step 1: Convert the string to lowercase.
-    // This makes the comparison case-insensitive.
-    // "MaDam" → "madam"
-    let toLowerCase = str.toLowerCase();
-
-    // Step 2: Split the string into an array.
-    // "madam" → ["m", "a", "d", "a", "m"]
-    let palindrome = toLowerCase
-        .split('')
-
-        // Step 3: Reverse the array.
-        // ["m", "a", "d", "a", "m"] → ["m", "a", "d", "a", "m"]
-        .reverse()
-
-        // Step 4: Join the array back into a string.
-        // ["m", "a", "d", "a", "m"] → "madam"
-        .join('');
-
-    // Step 5: Compare the original lowercase string
-    // with the reversed string.
-    // If both are equal, return true.
-    return toLowerCase === palindrome;
+if (str === reverse) {
+    console.log("Palindrome");
+} else {
+    console.log("Not Palindrome");
 }
 
-// Test Case
-console.log(isPalindrome("MaDam"));
-
 /*
-Dry Run
+HOW THIS FILE WORKS
 
-Input:
-"MaDam"
+I first convert the string to lowercase so the palindrome check ignores case.
 
-Step 1:
-toLowerCase = "madam"
+Then I reverse the string and compare it with the lowercase value.
 
-Step 2:
+IMPORTANT KEYWORDS
+
+toLowerCase()
+-> Converts a string to lowercase.
+
+if-else
+-> Chooses the output based on a condition.
+
 split()
-["m", "a", "d", "a", "m"]
+-> Converts a string into an array.
 
-Step 3:
 reverse()
-["m", "a", "d", "a", "m"]
+-> Reverses the array.
 
-Step 4:
-join()
-"madam"
+===
+-> Strict comparison.
 
-Step 5:
-"madam" === "madam"
-true
+FLOW
 
-Output:
-true
+Input -> lowercase -> reverse -> compare -> result
 */

@@ -1,29 +1,30 @@
-// Question:
-// Write a JavaScript program to reverse a given string.
+let str = "BTS";
 
-function reverseString(str) {
+let reverse = str.split('').reverse().join('');
 
-    // Step 1: Convert the string into an array of characters
-    // "BTS" → ["B", "T", "S"]
-    return str
+console.log(reverse);
 
-        .split('')
+/*
+HOW THIS FILE WORKS
 
-        // Step 2: Reverse the array
-        // ["B", "T", "S"] → ["S", "T", "B"]
-        .reverse()
+I first convert the string into an array of characters.
+Then I reverse the array and join it back into a string.
 
-        // Step 3: Join the array back into a string
-        // ["S", "T", "B"] → "STB"
-        .join('');
-}
+IMPORTANT KEYWORDS
 
-// Test Case
-console.log(reverseString("BTS"));
+split()
+-> Converts a string into an array.
 
-// Execution:
-// Input  : "BTS"
-// split  : ["B", "T", "S"]
-// reverse: ["S", "T", "B"]
-// join   : "STB"
-// Output : STB
+reverse()
+-> Reverses the array.
+
+join()
+-> Converts the array back into a string.
+
+let
+-> Declares a variable.
+
+FLOW
+
+String -> split() -> reverse() -> join() -> output
+*/

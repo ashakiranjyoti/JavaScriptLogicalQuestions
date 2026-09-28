@@ -1,87 +1,38 @@
-// Question:
-// Write a JavaScript program to find the largest number in an array
-// without using Math.max().
+let numbers = [2, 6, 4, 1, 9];
 
-// Logic:
-// 1. Assume the first element is the largest.
-// 2. Compare each element with the current largest number.
-// 3. If a bigger number is found, update largest.
+let largest = numbers[0];
 
-function findLargest(arr) {
-
-    // Step 1: Take the first element as the largest initially.
-    // Example:
-    // [2, 6, 4, 1, 9]
-    // largest = 2
-    let largest = arr[0];
-
-
-    // Step 2: Start checking from the second element (index 1).
-    for (let i = 1; i < arr.length; i++) {
-
-        // Step 3: If current element is bigger than largest,
-        // update the largest value.
-        if (arr[i] > largest) {
-
-            // Replace largest with the bigger number.
-            largest = arr[i];
-        }
+for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+        largest = numbers[i];
     }
-
-    // Step 4: Return the final largest number.
-    return largest;
 }
 
-
-// Test Case
-console.log(findLargest([2, 6, 4, 1, 9]));
-
+console.log(largest);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Array:
-[2, 6, 4, 1, 9]
+I assume the first number is the largest.
 
+Then I compare every next number with largest.
+If a bigger number is found, I update largest.
 
-Initial:
-largest = 2
+IMPORTANT KEYWORDS
 
+if
+-> Checks a condition.
 
-Loop 1:
-i = 1
-arr[i] = 6
+>
+-> Greater-than operator.
 
-6 > 2 ✅
-largest = 6
+length
+-> Gives the array length.
 
+largest
+-> Stores the current largest value.
 
-Loop 2:
-i = 2
-arr[i] = 4
+FLOW
 
-4 > 6 ❌
-No change
-largest = 6
-
-
-Loop 3:
-i = 3
-arr[i] = 1
-
-1 > 6 ❌
-No change
-largest = 6
-
-
-Loop 4:
-i = 4
-arr[i] = 9
-
-9 > 6 ✅
-largest = 9
-
-
-Final Output:
-9
+First value -> compare -> bigger? -> update -> final largest
 */

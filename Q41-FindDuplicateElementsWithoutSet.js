@@ -1,61 +1,41 @@
-// Question:
-// Write a JavaScript program to remove duplicate
-// elements from an array without using Set.
-//
-// Example:
-// [1,2,2,3,3,4]
-// → [1,2,3,4]
+let numbers = [1, 2, 2, 3, 3, 4];
 
+let unique = [];
 
-function removeDuplicates(arr) {
+for (let num of numbers) {
 
-    // Step 1:
-    // Create an empty array for unique elements.
-    let unique = [];
-
-
-    // Step 2:
-    // Traverse through each element.
-    for(let num of arr) {
-
-        // Check whether element already exists
-        // in unique array.
-        if(!unique.includes(num)) {
-
-            // If not present, add it.
-            unique.push(num);
-        }
+    if (!unique.includes(num)) {
+        unique.push(num);
     }
-
-
-    // Step 3:
-    // Return unique elements.
-    return unique;
 }
 
-
-console.log(removeDuplicates([1,2,2,3,3,4]));
-
+console.log(unique);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-1 → not present → add
-unique = [1]
+I do not use Set here.
 
-2 → not present → add
-unique = [1,2]
+I keep the unique values inside an array.
 
-2 → already present → skip
+Before adding a number, I check whether it is already present.
+If it is not present, I add it.
 
-3 → not present → add
-unique = [1,2,3]
+IMPORTANT KEYWORDS
 
-3 → already present → skip
+includes()
+-> Checks whether a value exists in an array.
 
-4 → not present → add
-unique = [1,2,3,4]
+push()
+-> Adds a value to the end of an array.
 
-Output:
-[1,2,3,4]
+for...of
+-> Loops through array values.
+
+!
+-> Logical NOT.
+
+FLOW
+
+Number -> already in unique array? -> yes: skip -> no: add
 */

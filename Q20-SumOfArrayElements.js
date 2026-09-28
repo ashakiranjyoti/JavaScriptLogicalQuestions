@@ -1,61 +1,37 @@
-// Question:
-// Write a JavaScript program to find the sum
-// of all elements in an array.
+let numbers = [10, 20, 30, 40];
 
-// Example:
-// [10,20,30,40] → 100
+let sum = 0;
 
-
-function findSum(arr) {
-
-    // Step 1:
-    // Initialize sum with 0.
-    let sum = 0;
-
-
-    // Step 2:
-    // Traverse through each element of the array.
-    for(let num of arr) {
-
-        // Add current element to sum.
-        sum += num;
-    }
-
-
-    // Step 3:
-    // Return the final sum.
-    return sum;
+for (let num of numbers) {
+    sum = sum + num;
 }
 
-
-console.log(findSum([10,20,30,40]));
-
+console.log(sum);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Array:
-[10,20,30,40]
+I start sum with 0.
 
-Initial:
-sum = 0
+Then I add every array element to sum.
 
-10:
-sum = 0 + 10
-    = 10
+Finally, I print the total.
 
-20:
-sum = 10 + 20
-    = 30
+IMPORTANT KEYWORDS
 
-30:
-sum = 30 + 30
-    = 60
+for...of
+-> Loops through array values.
 
-40:
-sum = 60 + 40
-    = 100
+sum
+-> Stores the total.
 
-Output:
-100
++
+-> Addition operator.
+
+=
+-> Assignment operator.
+
+FLOW
+
+sum=0 -> add each number -> final sum
 */

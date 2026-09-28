@@ -1,85 +1,48 @@
-// Question:
-// Write a JavaScript program to find
-// duplicate characters in a string.
+let str = "programming";
 
+let frequency = {};
 
-function findDuplicateCharacters(str) {
+for (let ch of str) {
 
-    // Step 1:
-    // Create an object to store
-    // frequency of each character.
-    let frequency = {};
-
-
-    // Step 2:
-    // Traverse through every character.
-    for(let char of str) {
-
-        // If character already exists,
-        // increase its count.
-        if(frequency[char]) {
-
-            frequency[char]++;
-        }
-
-        // First occurrence of character.
-        else {
-
-            frequency[char] = 1;
-        }
+    if (frequency[ch]) {
+        frequency[ch]++;
+    } else {
+        frequency[ch] = 1;
     }
-
-
-    // Step 3:
-    // Create an array to store duplicates.
-    let duplicates = [];
-
-
-    // Step 4:
-    // Check frequency of every character.
-    for(let char in frequency) {
-
-        // Frequency greater than 1
-        // means character is duplicate.
-        if(frequency[char] > 1) {
-
-            duplicates.push(char);
-        }
-    }
-
-
-    // Step 5:
-    // Return duplicate characters.
-    return duplicates;
 }
 
+console.log("Duplicate characters:");
 
-console.log(findDuplicateCharacters("programming"));
+for (let ch in frequency) {
 
+    if (frequency[ch] > 1) {
+        console.log(ch);
+    }
+}
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-String:
-"programming"
+I first count how many times each character appears.
 
-Frequency:
+Then I check the frequency object.
+If a character appears more than once, I print it.
 
-p → 1
-r → 2
-o → 1
-g → 2
-a → 1
-m → 2
-i → 1
-n → 1
+IMPORTANT KEYWORDS
 
-Frequency > 1:
+for...of
+-> Loops through characters.
 
-r
-g
-m
+for...in
+-> Loops through object keys.
 
-Output:
-[ 'r', 'g', 'm' ]
+frequency[ch]
+-> Stores the character count.
+
+> 1
+-> Means the character appeared more than once.
+
+FLOW
+
+String -> count characters -> frequency > 1 -> duplicate characters
 */

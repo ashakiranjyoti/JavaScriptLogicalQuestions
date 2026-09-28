@@ -1,79 +1,44 @@
-// Question:
-// Write a JavaScript program to count the number of vowels
-// present in a given string.
-//
-// Vowels are:
-// a, e, i, o, u
+let str = "javascript";
 
+str = str.toLowerCase();
 
-function countVowels(str) {
+let count = 0;
 
-    // Step 1: Create a variable to store the vowel count.
-    // Initially, count is 0 because no vowel is checked yet.
-    let count = 0;
+for (let i = 0; i < str.length; i++) {
 
+    let ch = str[i];
 
-    // Step 2: Create an array containing all vowels.
-    // We will check each character against this array.
-    let vowel = ['a', 'e', 'i', 'o', 'u'];
+    if (ch === "a" || ch === "e" || ch === "i" ||
+        ch === "o" || ch === "u") {
 
-
-    // Step 3: Loop through every character of the string.
-    for (let i = 0; i < str.length; i++) {
-
-
-        // Step 4: Check whether the current character exists
-        // inside the vowel array using includes().
-        if (vowel.includes(str[i])) {
-
-            // Step 5: Increase count whenever a vowel is found.
-            count++;
-        }
+        count++;
     }
-
-
-    // Step 6: Return the total number of vowels.
-    return count;
 }
 
-
-// Test Case
-console.log(countVowels("javascript"));
-
-
+console.log(count);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Input:
-"javascript"
+I check every character in the string.
 
+If the character is a, e, i, o, or u, I increase the count.
 
-Characters:
+IMPORTANT KEYWORDS
 
-j → not a vowel ❌
-a → vowel ✅
-v → not a vowel ❌
-a → vowel ✅
-s → not a vowel ❌
-c → not a vowel ❌
-r → not a vowel ❌
-i → vowel ✅
-p → not a vowel ❌
-t → not a vowel ❌
+||
+-> Logical OR.
 
+char
+-> Variable used here to store one character.
 
-Counting:
+count++
+-> Increases the counter.
 
-a = 1
-a = 2
-i = 3
+length
+-> Gives the string length.
 
+FLOW
 
-Final Count:
-3
-
-
-Output:
-3
+String -> check each character -> vowel? -> count++
 */

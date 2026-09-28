@@ -1,96 +1,41 @@
-// Question:
-// Write a JavaScript program to count the frequency
-// of each element in an array.
+let numbers = [1, 2, 2, 3, 3, 3];
 
+let frequency = {};
 
-function countFrequency(arr) {
+for (let num of numbers) {
 
-    let frequency = {};
-
-
-    // Loop through every element
-    for(let i = 0; i < arr.length; i++) {
-
-
-        // If element already exists,
-        // increase count.
-        if(frequency[arr[i]]) {
-
-            frequency[arr[i]]++;
-
-        }
-
-        // Otherwise create new key.
-        else {
-
-            frequency[arr[i]] = 1;
-        }
+    if (frequency[num]) {
+        frequency[num]++;
+    } else {
+        frequency[num] = 1;
     }
-
-
-    return frequency;
 }
 
-
-console.log(countFrequency([1,2,2,3,3,3]));
-
+console.log(frequency);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Input:
-[1,2,2,3,3,3]
+I use an object to store each number and its frequency.
 
+If the number already exists, I increase its count.
+Otherwise, I create it with count 1.
 
-1:
-{
-1:1
-}
+IMPORTANT KEYWORDS
 
+{}
+-> Creates an object.
 
-2:
-{
-1:1,
-2:1
-}
+for...of
+-> Loops through array values.
 
+frequency[num]
+-> Reads or stores the count for a number.
 
-2 again:
-{
-1:1,
-2:2
-}
+++
+-> Increases a value by 1.
 
+FLOW
 
-3:
-{
-1:1,
-2:2,
-3:1
-}
-
-
-3:
-{
-1:1,
-2:2,
-3:2
-}
-
-
-3:
-{
-1:1,
-2:2,
-3:3
-}
-
-
-Output:
-
-{
-1:1,
-2:2,
-3:3
-}
+Number -> key exists? -> increase count / add 1
 */

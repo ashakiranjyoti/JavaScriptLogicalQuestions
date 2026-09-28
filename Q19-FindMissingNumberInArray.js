@@ -1,68 +1,43 @@
-// Question:
-// Write a JavaScript program to find the missing number
-// from an array containing numbers from 1 to n.
+let numbers = [1, 2, 3, 5];
 
+let n = numbers.length + 1;
 
-function findMissing(arr) {
+let total = n * (n + 1) / 2;
 
+let sum = 0;
 
-    // Step 1:
-    // Find expected sum.
-    let n = arr.length + 1;
-
-    let total = n * (n + 1) / 2;
-
-
-    // Step 2:
-    // Find actual array sum.
-    let sum = 0;
-
-    for(let num of arr) {
-
-        sum += num;
-    }
-
-
-    // Step 3:
-    // Difference gives missing number.
-    return total - sum;
+for (let num of numbers) {
+    sum = sum + num;
 }
 
+let missing = total - sum;
 
-console.log(findMissing([1,2,3,5]));
-
+console.log(missing);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Array:
-[1,2,3,5]
+I calculate the expected sum of numbers from 1 to n.
 
+Then I calculate the actual array sum.
 
-n = 5
+The difference between the expected sum and actual sum is the missing number.
 
+IMPORTANT KEYWORDS
 
-Expected Sum:
+length
+-> Number of array elements.
 
-5*(5+1)/2
+for...of
+-> Loops through array values.
 
-= 15
+sum
+-> Stores the running total.
 
+/
+-> Division operator.
 
-Actual Sum:
+FLOW
 
-1+2+3+5
-
-= 11
-
-
-Missing:
-
-15 - 11
-
-= 4
-
-
-Output:
-4
+Expected sum -> actual sum -> subtract -> missing number
 */

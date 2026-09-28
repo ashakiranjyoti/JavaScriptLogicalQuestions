@@ -1,49 +1,35 @@
-// Question:
-// Write a JavaScript program to count
-// the number of words in a string.
+let str = "I am learning JavaScript";
 
+str = str.trim();
 
-function countWords(str) {
+let words = str.split(/\s+/);
 
-    // Step 1:
-    // trim() removes extra spaces from
-    // beginning and end.
-    str = str.trim();
-
-
-    // Step 2:
-    // split(/\s+/) separates the string
-    // wherever whitespace occurs.
-    let words = str.split(/\s+/);
-
-
-    // Step 3:
-    // length gives total number of words.
-    return words.length;
-}
-
-
-console.log(countWords("I am learning JavaScript"));
-
+console.log(words.length);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Input:
-"I am learning JavaScript"
+I first remove extra spaces from the beginning and end.
 
-After split():
+Then I split the string into words using whitespace.
 
-[
-    "I",
-    "am",
-    "learning",
-    "JavaScript"
-]
+The length of the resulting array is the number of words.
 
-Number of words:
-4
+IMPORTANT KEYWORDS
 
-Output:
-4
+trim()
+-> Removes leading and trailing spaces.
+
+split()
+-> Splits a string into an array.
+
+\\s+
+-> One or more whitespace characters.
+
+length
+-> Number of words in the array.
+
+FLOW
+
+Sentence -> trim -> split into words -> length -> word count
 */

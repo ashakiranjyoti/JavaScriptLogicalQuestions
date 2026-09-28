@@ -1,84 +1,40 @@
-// Question:
-// Write a JavaScript program to print numbers from 1 to 100.
-// For multiples of 3 print "Fizz".
-// For multiples of 5 print "Buzz".
-// For multiples of both 3 and 5 print "FizzBuzz".
+for (let i = 1; i <= 100; i++) {
 
-function fizzBuzz() {
-
-    // Step 1: Run a loop from 1 to 100.
-    for (let i = 1; i <= 100; i++) {
-
-
-        // Step 2: Check if the number is divisible by both 3 and 5.
-        // Example:
-        // 15 % 3 = 0 and 15 % 5 = 0
-        // So output will be "FizzBuzz"
-        if (i % 3 === 0 && i % 5 === 0) {
-
-            console.log("FizzBuzz");
-
-
-        // Step 3: Check if the number is divisible only by 3.
-        // Example:
-        // 9 % 3 = 0
-        // Output: "Fizz"
-        } else if (i % 3 === 0) {
-
-            console.log("Fizz");
-
-
-        // Step 4: Check if the number is divisible only by 5.
-        // Example:
-        // 10 % 5 = 0
-        // Output: "Buzz"
-        } else if (i % 5 === 0) {
-
-            console.log("Buzz");
-
-
-        // Step 5: If the number is not divisible by 3 or 5,
-        // print the original number.
-        } else {
-
-            console.log(i);
-        }
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
     }
 }
 
-
-// Function call
-fizzBuzz();
-
-
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-i = 1
-1 is not divisible by 3 or 5
-Output: 1
+I loop from 1 to 100.
 
+First I check numbers divisible by both 3 and 5.
+Then I check 3, then 5.
+Otherwise I print the number.
 
-i = 3
-3 % 3 = 0
-Output: Fizz
+IMPORTANT KEYWORDS
 
+%
+-> Returns the remainder.
 
-i = 5
-5 % 5 = 0
-Output: Buzz
+&&
+-> Logical AND.
 
+else if
+-> Checks another condition.
 
-i = 15
-15 % 3 = 0
-15 % 5 = 0
-Output: FizzBuzz
+<=
+-> Less-than-or-equal operator.
 
+FLOW
 
-i = 16
-Not divisible by 3 or 5
-Output: 16
-
-
-Loop continues until i = 100
+1 to 100 -> check 3 and 5 -> FizzBuzz / Fizz / Buzz / number
 */

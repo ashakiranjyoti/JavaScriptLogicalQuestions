@@ -1,119 +1,53 @@
-// Question:
-// Write a JavaScript program to check whether
-// a number is an Armstrong number.
+let num = 153;
 
-// Example:
-// 153
-//
-// 1³ + 5³ + 3³
-// = 1 + 125 + 27
-// = 153
-//
-// Therefore, 153 is an Armstrong number.
+let original = num;
 
+let digits = String(num).length;
 
-function isArmstrong(num) {
+let sum = 0;
 
-    // Step 1:
-    // Store original number because
-    // num will change during calculation.
-    let original = num;
+while (num > 0) {
 
+    let digit = num % 10;
 
-    // Step 2:
-    // Find total number of digits.
-    let digits = String(num).length;
+    sum = sum + digit ** digits;
 
-
-    // Step 3:
-    // Initialize sum with 0.
-    let sum = 0;
-
-
-    // Step 4:
-    // Extract each digit and calculate
-    // digit raised to number of digits.
-    while(num > 0) {
-
-        // Get last digit.
-        let digit = num % 10;
-
-
-        // Add digit^digits to sum.
-        sum = sum + digit ** digits;
-
-
-        // Remove last digit.
-        num = Math.floor(num / 10);
-    }
-
-
-    // Step 5:
-    // Compare calculated sum with original number.
-    return sum === original;
+    num = Math.floor(num / 10);
 }
 
-
-console.log(isArmstrong(153));
-console.log(isArmstrong(123));
-
+if (sum === original) {
+    console.log("Armstrong");
+} else {
+    console.log("Not Armstrong");
+}
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Input:
-153
+I save the original number because num changes during the calculation.
 
-Original:
-153
+I count the digits, take one digit at a time, raise it to the number of digits, and add the result.
 
-Number of digits:
-3
+Finally, I compare the sum with the original number.
 
+IMPORTANT KEYWORDS
 
-First digit:
+String()
+-> Converts a value to a string.
 
-153 % 10 = 3
+length
+-> Gives the number of characters.
 
-sum = 0 + 3³
-    = 27
+while
+-> Repeats while the condition is true.
 
-num = Math.floor(153 / 10)
-    = 15
+Math.floor()
+-> Removes the decimal part.
 
+**
+-> Exponent operator.
 
-Second digit:
+FLOW
 
-15 % 10 = 5
-
-sum = 27 + 5³
-    = 27 + 125
-    = 152
-
-num = Math.floor(15 / 10)
-    = 1
-
-
-Third digit:
-
-1 % 10 = 1
-
-sum = 152 + 1³
-    = 153
-
-num = Math.floor(1 / 10)
-    = 0
-
-
-Comparison:
-
-sum === original
-
-153 === 153
-
-true
-
-
-Output:
-true
+Original -> count digits -> take digit -> power -> sum -> compare
 */

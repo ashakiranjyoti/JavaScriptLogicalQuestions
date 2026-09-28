@@ -1,54 +1,40 @@
-// Question:
-// Write a JavaScript program to find the sum
-// of all digits of a number.
-//
-// Example:
-// 1234 → 1 + 2 + 3 + 4 = 10
+let num = 1234;
 
+let sum = 0;
 
-function sumOfDigits(num) {
+while (num > 0) {
 
-    // Step 1:
-    // Initialize sum with 0.
-    let sum = 0;
+    let digit = num % 10;
 
+    sum = sum + digit;
 
-    // Step 2:
-    // Extract each digit.
-    while(num > 0) {
-
-        // Get last digit.
-        let digit = num % 10;
-
-
-        // Add digit to sum.
-        sum += digit;
-
-
-        // Remove last digit.
-        num = Math.floor(num / 10);
-    }
-
-
-    // Step 3:
-    // Return final sum.
-    return sum;
+    num = Math.floor(num / 10);
 }
 
-
-console.log(sumOfDigits(1234));
-
+console.log(sum);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-num = 1234
+I take one digit at a time from the number and add it to sum.
 
-4 → sum = 4
-3 → sum = 4 + 3 = 7
-2 → sum = 7 + 2 = 9
-1 → sum = 9 + 1 = 10
+The loop continues until the number becomes 0.
 
-Output:
-10
+IMPORTANT KEYWORDS
+
+%
+-> Gets the last digit.
+
+Math.floor()
+-> Removes the last digit after division.
+
+sum
+-> Stores the running total.
+
+while
+-> Repeats the logic.
+
+FLOW
+
+1234 -> 4 -> 3 -> 2 -> 1 -> add digits -> 10
 */

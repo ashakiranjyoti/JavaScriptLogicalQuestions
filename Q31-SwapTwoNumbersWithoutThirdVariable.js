@@ -1,43 +1,58 @@
-// Question:
-// Write a JavaScript program to swap two numbers
-// without using a third variable.
+let a = 10;
+let b = 20;
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+console.log("Without third variable:");
+console.log("a = " + a);
+console.log("b = " + b);
 
 
-function swapNumbers(a, b) {
+let x = 10;
+let y = 20;
+let temp;
 
-    // Step 1:
-    // Use array destructuring to swap values.
-    [a, b] = [b, a];
+temp = x;
+x = y;
+y = temp;
 
-
-    // Step 2:
-    // Return swapped values.
-    return [a, b];
-}
-
-
-console.log(swapNumbers(10, 20));
-
+console.log("Using third variable:");
+console.log("x = " + x);
+console.log("y = " + y);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Initial:
+This file shows two common ways to swap two numbers.
 
-a = 10
-b = 20
+First, I swap the values without using a third variable by using addition and subtraction.
 
-Destructuring:
+Second, I use a temporary variable to store one value while swapping.
 
-[a, b] = [b, a]
+IMPORTANT KEYWORDS
 
-[a, b] = [20, 10]
+let
+-> Declares a variable.
 
-Therefore:
+temp
+-> Temporary variable used during swapping.
 
-a = 20
-b = 10
+=
+-> Assignment operator.
 
-Output:
-[20, 10]
++
+-> Addition.
+
+-
+-> Subtraction.
+
+FLOW
+
+Without third variable:
+a=10, b=20 -> a=30 -> b=10 -> a=20
+
+Using third variable:
+x=10, y=20 -> temp=x -> x=y -> y=temp
 */

@@ -1,76 +1,42 @@
-// Question:
-// Write a JavaScript program to reverse a number.
-//
-// Example:
-// 1234 → 4321
+let num = 1234;
 
+let reverse = 0;
 
-function reverseNumber(num) {
+while (num > 0) {
 
-    // Step 1:
-    // Store reversed number as 0.
-    let reverse = 0;
+    let digit = num % 10;
 
+    reverse = reverse * 10 + digit;
 
-    // Step 2:
-    // Extract digits until number becomes 0.
-    while(num > 0) {
-
-        // Get the last digit.
-        let digit = num % 10;
-
-
-        // Add digit to reversed number.
-        reverse = reverse * 10 + digit;
-
-
-        // Remove the last digit.
-        num = Math.floor(num / 10);
-    }
-
-
-    // Step 3:
-    // Return reversed number.
-    return reverse;
+    num = Math.floor(num / 10);
 }
 
-
-console.log(reverseNumber(1234));
-
+console.log(reverse);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-num = 1234
-reverse = 0
+I take the last digit using % 10.
 
-1234 % 10 = 4
-reverse = 0 * 10 + 4
-        = 4
+Then I add it to the reverse number after shifting the existing digits.
 
-num = 123
+Finally, I remove the last digit from num and repeat.
 
+IMPORTANT KEYWORDS
 
-123 % 10 = 3
-reverse = 4 * 10 + 3
-        = 43
+while
+-> Repeats while the condition is true.
 
-num = 12
+% 10
+-> Gets the last digit.
 
+* 10
+-> Shifts existing digits left.
 
-12 % 10 = 2
-reverse = 43 * 10 + 2
-        = 432
+Math.floor()
+-> Removes the decimal part after division.
 
-num = 1
+FLOW
 
-
-1 % 10 = 1
-reverse = 432 * 10 + 1
-        = 4321
-
-num = 0
-
-Output:
-4321
+Number -> last digit -> add to reverse -> remove digit -> repeat
 */

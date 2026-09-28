@@ -1,38 +1,31 @@
-// Question:
-// Write a JavaScript program to remove
-// all spaces from a string.
+let str = "Hello World JavaScript";
 
+let result = str.replace(/\s/g, "");
 
-function removeSpaces(str) {
-
-    // Step 1:
-    // Use replace() to find whitespace.
-    // \s → whitespace character
-    // g → replace all occurrences
-
-
-    // Step 2:
-    // Replace every whitespace with
-    // an empty string.
-    return str.replace(/\s/g, '');
-}
-
-
-console.log(removeSpaces("Hello World JavaScript"));
-
+console.log(result);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Input:
-"Hello World JavaScript"
+I use replace() with a regular expression to find all whitespace characters.
 
-Spaces:
-Hello[ ]World[ ]JavaScript
+Then I replace them with an empty string.
 
-Replace spaces with "":
-HelloWorldJavaScript
+IMPORTANT KEYWORDS
 
-Output:
-HelloWorldJavaScript
+replace()
+-> Replaces matching text.
+
+\\s
+-> Regular expression pattern for whitespace.
+
+g
+-> Global flag, so all matches are replaced.
+
+""
+-> Empty string.
+
+FLOW
+
+String -> find whitespace -> replace with empty string -> result
 */

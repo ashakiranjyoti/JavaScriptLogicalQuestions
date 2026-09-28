@@ -1,52 +1,35 @@
-// Question:
-// Write a JavaScript program to find the largest number in an array
-// using the Math.max() method.
+let numbers = [3, 7, 2, 4, 9];
 
-// Math.max() returns the largest value from given numbers.
-// The spread operator (...) converts array elements into separate values.
-//
-// Example:
-// Math.max(3, 7, 2, 4, 9) → 9
+let largest = numbers[0];
 
-function findLargestNum(arr) {
-
-    // Step 1: Use spread operator (...) to unpack array values.
-    // [3, 7, 2, 4, 9]
-    // becomes:
-    // 3, 7, 2, 4, 9
-    //
-    // Step 2: Math.max() compares all values
-    // and returns the biggest number.
-    return Math.max(...arr);
+for (let i = 1; i < numbers.length; i++) {
+    largest = Math.max(largest, numbers[i]);
 }
 
-// Test Case
-console.log(findLargestNum([3, 7, 2, 4, 9]));
+console.log(largest);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Input:
-arr = [3, 7, 2, 4, 9]
+I take the first array value as the current largest number.
 
-Spread Operator:
-...arr
+Then I compare it with each next number using Math.max().
 
-Changes:
-[3, 7, 2, 4, 9]
-        ↓
-3, 7, 2, 4, 9
+IMPORTANT KEYWORDS
 
-Math.max():
-Compare all numbers
+Math.max()
+-> Returns the larger value.
 
-3 < 7
-7 > 2
-7 > 4
-9 > 7
+length
+-> Gives the number of array elements.
 
-Largest Number = 9
+for
+-> Loops through the array.
 
-Output:
-9
+numbers[i]
+-> Gets the current array element.
+
+FLOW
+
+First value -> compare with next value -> update largest -> repeat
 */

@@ -1,87 +1,39 @@
-// Question:
-// Write a JavaScript program to find the smallest number
-// in an array without using Math.min().
+let numbers = [5, 2, 8, 1, 9];
 
+let smallest = numbers[0];
 
-function findSmallest(arr) {
+for (let i = 1; i < numbers.length; i++) {
 
-    // Step 1:
-    // Assume first element is the smallest initially.
-    //
-    // Example:
-    // [5,2,8,1]
-    // smallest = 5
-    let smallest = arr[0];
-
-
-    // Step 2:
-    // Compare each element with current smallest value.
-    for(let i = 1; i < arr.length; i++) {
-
-
-        // Step 3:
-        // If current element is smaller,
-        // update smallest value.
-        if(arr[i] < smallest) {
-
-            smallest = arr[i];
-        }
+    if (numbers[i] < smallest) {
+        smallest = numbers[i];
     }
-
-
-    // Step 4:
-    // Return final smallest number.
-    return smallest;
 }
 
-
-console.log(findSmallest([5,2,8,1,9]));
-
+console.log(smallest);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Array:
-[5,2,8,1,9]
+I assume the first number is the smallest.
 
+Then I compare every next number with smallest.
+If I find a smaller number, I update smallest.
 
-Initial:
-smallest = 5
+IMPORTANT KEYWORDS
 
+<
+-> Less-than operator.
 
-i = 1
-arr[i] = 2
+numbers[i]
+-> Gets the current array value.
 
-2 < 5 ✅
+for
+-> Loops through the array.
 
-smallest = 2
+smallest
+-> Stores the current smallest value.
 
+FLOW
 
-i = 2
-arr[i] = 8
-
-8 < 2 ❌
-No change
-
-
-i = 3
-arr[i] = 1
-
-1 < 2 ✅
-
-smallest = 1
-
-
-i = 4
-arr[i] = 9
-
-9 < 1 ❌
-
-
-Final Answer:
-1
-
-
-Output:
-1
+First value -> compare -> smaller? -> update -> final smallest
 */

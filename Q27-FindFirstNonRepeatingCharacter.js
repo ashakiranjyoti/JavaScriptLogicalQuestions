@@ -1,76 +1,48 @@
-// Question:
-// Write a JavaScript program to find the first
-// non-repeating character in a string.
+let str = "aabbcde";
 
+let frequency = {};
 
-function firstNonRepeatingChar(str) {
+for (let ch of str) {
 
-    // Step 1:
-    // Create an object to store
-    // frequency of each character.
-    let frequency = {};
-
-
-    // Step 2:
-    // Count frequency of every character.
-    for(let char of str) {
-
-        if(frequency[char]) {
-
-            frequency[char]++;
-        }
-
-        else {
-
-            frequency[char] = 1;
-        }
+    if (frequency[ch]) {
+        frequency[ch]++;
+    } else {
+        frequency[ch] = 1;
     }
-
-
-    // Step 3:
-    // Traverse the original string again.
-    for(let char of str) {
-
-        // First character with frequency 1
-        // is non-repeating.
-        if(frequency[char] === 1) {
-
-            return char;
-        }
-    }
-
-
-    // Step 4:
-    // Return null if no such character exists.
-    return null;
 }
 
+for (let ch of str) {
 
-console.log(firstNonRepeatingChar("aabbcde"));
-
+    if (frequency[ch] === 1) {
+        console.log(ch);
+        break;
+    }
+}
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-String:
-"aabbcde"
+First I count the frequency of each character.
 
-Frequency:
+Then I go through the original string again.
 
-a → 2
-b → 2
-c → 1
-d → 1
-e → 1
+The first character with frequency 1 is the first non-repeating character.
 
-Traverse again:
+IMPORTANT KEYWORDS
 
-a → 2 → skip
-a → 2 → skip
-b → 2 → skip
-b → 2 → skip
-c → 1 → return c
+frequency
+-> Stores character counts.
 
-Output:
-c
+for...of
+-> Loops through characters.
+
+break
+-> Stops the loop.
+
+===
+-> Strict equality operator.
+
+FLOW
+
+Count frequency -> check original order -> frequency 1 -> first non-repeating
 */

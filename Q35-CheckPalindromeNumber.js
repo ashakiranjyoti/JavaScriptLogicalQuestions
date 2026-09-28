@@ -1,66 +1,48 @@
-// Question:
-// Write a JavaScript program to check whether
-// a number is a palindrome.
-//
-// Example:
-// 121 → 121 → Palindrome
-// 123 → 321 → Not Palindrome
+let num = 121;
 
+let original = num;
 
-function isPalindromeNumber(num) {
+let reverse = 0;
 
-    // Step 1:
-    // Store original number because
-    // num will change while reversing.
-    let original = num;
+while (num > 0) {
 
+    let digit = num % 10;
 
-    // Step 2:
-    // Initialize reverse as 0.
-    let reverse = 0;
+    reverse = reverse * 10 + digit;
 
-
-    // Step 3:
-    // Reverse the number.
-    while(num > 0) {
-
-        let digit = num % 10;
-
-        reverse = reverse * 10 + digit;
-
-        num = Math.floor(num / 10);
-    }
-
-
-    // Step 4:
-    // Compare reversed number with original.
-    return original === reverse;
+    num = Math.floor(num / 10);
 }
 
-
-console.log(isPalindromeNumber(121));
-console.log(isPalindromeNumber(123));
-
+if (original === reverse) {
+    console.log("Palindrome");
+} else {
+    console.log("Not Palindrome");
+}
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Input:
-121
+I save the original number.
 
-Original:
-121
+Then I reverse the number using digit extraction.
 
-Reverse:
+Finally, I compare the original number with the reversed number.
 
-1 → reverse = 1
-2 → reverse = 12
-1 → reverse = 121
+IMPORTANT KEYWORDS
 
-Comparison:
+original
+-> Keeps the input value safe.
 
-121 === 121
+reverse
+-> Stores the reversed number.
 
-Output:
-true
+while
+-> Repeats the digit logic.
+
+===
+-> Strict comparison.
+
+FLOW
+
+Original -> reverse number -> compare -> Palindrome / Not Palindrome
 */

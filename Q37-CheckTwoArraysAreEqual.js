@@ -1,61 +1,51 @@
-// Question:
-// Write a JavaScript program to check whether
-// two arrays contain the same elements.
+let arr1 = [1, 2, 3];
+let arr2 = [1, 2, 3];
 
+let equal = true;
 
-function areArraysEqual(arr1, arr2) {
+if (arr1.length !== arr2.length) {
+    equal = false;
+} else {
 
-    // Step 1:
-    // If lengths are different,
-    // arrays cannot be equal.
-    if(arr1.length !== arr2.length) {
+    for (let i = 0; i < arr1.length; i++) {
 
-        return false;
-    }
-
-
-    // Step 2:
-    // Compare each element.
-    for(let i = 0; i < arr1.length; i++) {
-
-        if(arr1[i] !== arr2[i]) {
-
-            return false;
+        if (arr1[i] !== arr2[i]) {
+            equal = false;
+            break;
         }
     }
-
-
-    // Step 3:
-    // If all elements match,
-    // arrays are equal.
-    return true;
 }
 
-
-console.log(areArraysEqual(
-    [1,2,3],
-    [1,2,3]
-));
-
+if (equal) {
+    console.log("Arrays are equal");
+} else {
+    console.log("Arrays are not equal");
+}
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Array 1:
-[1,2,3]
+I first compare the lengths of both arrays.
 
-Array 2:
-[1,2,3]
+If the lengths are the same, I compare each element at the same index.
 
-Length:
-3 === 3
+If any element is different, the arrays are not equal.
 
-Compare:
+IMPORTANT KEYWORDS
 
-1 === 1 → true
-2 === 2 → true
-3 === 3 → true
+boolean value
+-> true or false.
 
-Output:
-true
+length
+-> Number of array elements.
+
+!==
+-> Strict not-equal operator.
+
+break
+-> Stops the loop.
+
+FLOW
+
+Compare length -> compare elements -> difference found? -> result
 */

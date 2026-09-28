@@ -1,60 +1,35 @@
-// Question:
-// Write a JavaScript program to find
-// the factorial of a number.
+let num = 5;
 
-// Example:
-// 5! = 5 × 4 × 3 × 2 × 1
-//    = 120
+let factorial = 1;
 
-
-function factorial(num) {
-
-    // Step 1:
-    // Initialize result with 1.
-    let result = 1;
-
-
-    // Step 2:
-    // Multiply result with every number
-    // from 1 to num.
-    for(let i = 1; i <= num; i++) {
-
-        result = result * i;
-    }
-
-
-    // Step 3:
-    // Return final factorial.
-    return result;
+for (let i = 1; i <= num; i++) {
+    factorial = factorial * i;
 }
 
-
-console.log(factorial(5));
-
+console.log(factorial);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-num = 5
+I start factorial with 1.
 
-Initial:
-result = 1
+Then I multiply it by every number from 1 to num.
 
-i = 1:
-result = 1 × 1 = 1
+IMPORTANT KEYWORDS
 
-i = 2:
-result = 1 × 2 = 2
+for
+-> Repeats multiplication.
 
-i = 3:
-result = 2 × 3 = 6
+*
+-> Multiplication operator.
 
-i = 4:
-result = 6 × 4 = 24
+<=
+-> Less-than-or-equal operator.
 
-i = 5:
-result = 24 × 5 = 120
+factorial
+-> Stores the running result.
 
-Output:
-120
+FLOW
+
+1 -> multiply by 2 -> multiply by 3 -> ... -> factorial
 */

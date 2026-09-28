@@ -1,56 +1,69 @@
 # JavaScript Logical Questions
 
-Daily JavaScript logical problems with solutions.
+JavaScript logical programs for interview coding practice.
+
+All programs are arranged from **Q01 to Q42**.
+
+## What is inside every file?
+
+Each JavaScript file follows the same simple format:
+
+1. **Complete code first**
+2. **HOW THIS FILE WORKS**
+3. **IMPORTANT KEYWORDS**
+4. **FLOW**
+
+The code is kept beginner-friendly and focused on basic JavaScript syntax such as variables, conditions, loops, arrays, strings and simple objects/collections.
 
 ## Quick Program Index
 
-All programs are numbered in a continuous sequence from **Q01 to Q42**. Click **Open File** to jump directly to the program.
-
-| No. | Program | File |
+| No. | Program | Open |
 |---:|---|---|
-| 1 | Even Odd | [Open File](./Q01-EvenOdd.js) |
-| 2 | Reverse String Using Built In Method | [Open File](./Q02-ReverseStringUsingBuiltInMethod.js) |
-| 3 | Reverse String Without Built In Method | [Open File](./Q03-ReverseStringWithoutBuiltInMethod.js) |
-| 4 | Check Palindrome | [Open File](./Q04-CheckPalindrome.js) |
-| 5 | Check Palindrome Case Sensitive | [Open File](./Q05-CheckPalindromeCaseSensitive.js) |
-| 6 | Find Largest Number Using Math | [Open File](./Q06-FindLargestNumberUsingMath.js) |
-| 7 | Find Largest Number | [Open File](./Q07-FindLargestNumber.js) |
-| 8 | Remove Duplicates Using Set | [Open File](./Q08-RemoveDuplicatesUsingSet.js) |
-| 9 | Fizz Buzz | [Open File](./Q09-FizzBuzz.js) |
-| 10 | Count Letter A | [Open File](./Q10-CountLetterA.js) |
-| 11 | Check Anagram | [Open File](./Q11-CheckAnagram.js) |
-| 12 | Count Vowels | [Open File](./Q12-CountVowels.js) |
-| 13 | Count Letter | [Open File](./Q13-CountLetter.js) |
-| 14 | Count Uppercase Letters | [Open File](./Q14-CountUppercaseLetters.js) |
-| 15 | Find Smallest In Array | [Open File](./Q15-FindSmallestInArray.js) |
-| 16 | Find Second Largest Number | [Open File](./Q16-FindSecondLargestNumber.js) |
-| 17 | Count Frequency Of Array Elements | [Open File](./Q17-CountFrequencyOfArrayElements.js) |
-| 18 | Find Duplicate Elements | [Open File](./Q18-FindDuplicateElements.js) |
-| 19 | Find Missing Number In Array | [Open File](./Q19-FindMissingNumberInArray.js) |
-| 20 | Sum Of Array Elements | [Open File](./Q20-SumOfArrayElements.js) |
-| 21 | Find Average Of Array | [Open File](./Q21-FindAverageOfArray.js) |
-| 22 | Count Positive And Negative Numbers | [Open File](./Q22-CountPositiveAndNegativeNumbers.js) |
-| 23 | Find Largest And Smallest Number | [Open File](./Q23-FindLargestAndSmallestNumber.js) |
-| 24 | Remove Spaces From String | [Open File](./Q24-RemoveSpacesFromString.js) |
-| 25 | Count Words In String | [Open File](./Q25-CountWordsInString.js) |
-| 26 | Find Duplicate Characters In String | [Open File](./Q26-FindDuplicateCharactersInString.js) |
-| 27 | Find First Non Repeating Character | [Open File](./Q27-FindFirstNonRepeatingCharacter.js) |
-| 28 | Check Prime Number | [Open File](./Q28-CheckPrimeNumber.js) |
-| 29 | Find Factorial Of Number | [Open File](./Q29-FindFactorialOfNumber.js) |
-| 30 | Fibonacci Series | [Open File](./Q30-FibonacciSeries.js) |
-| 31 | Swap Two Numbers Without Third Variable | [Open File](./Q31-SwapTwoNumbersWithoutThirdVariable.js) |
-| 32 | Check Armstrong Number | [Open File](./Q32-CheckArmstrongNumber.js) |
-| 33 | Reverse Number | [Open File](./Q33-ReverseNumber.js) |
-| 34 | Sum Of Digits | [Open File](./Q34-SumOfDigits.js) |
-| 35 | Check Palindrome Number | [Open File](./Q35-CheckPalindromeNumber.js) |
-| 36 | Find Element In Two Arrays | [Open File](./Q36-FindElementInTwoArrays.js) |
-| 37 | Check Two Arrays Are Equal | [Open File](./Q37-CheckTwoArraysAreEqual.js) |
-| 38 | Find Element Present In One Array Not Another | [Open File](./Q38-FindElementPresentInOneArrayNotAnother.js) |
-| 39 | Find Longest Word In String | [Open File](./Q39-FindLongestWordInString.js) |
-| 40 | Count Character Frequency | [Open File](./Q40-CountCharacterFrequency.js) |
-| 41 | Find Duplicate Elements Without Set | [Open File](./Q41-FindDuplicateElementsWithoutSet.js) |
-| 42 | Find Second Smallest Number | [Open File](./Q42-FindSecondSmallestNumber.js) |
+| Q01 | Even / Odd | [Open File](./Q01-EvenOdd.js) |
+| Q02 | Reverse String Using Built-in Method | [Open File](./Q02-ReverseStringUsingBuiltInMethod.js) |
+| Q03 | Reverse String Without Built-in Method | [Open File](./Q03-ReverseStringWithoutBuiltInMethod.js) |
+| Q04 | Check Palindrome | [Open File](./Q04-CheckPalindrome.js) |
+| Q05 | Check Palindrome (Case-Insensitive) | [Open File](./Q05-CheckPalindromeCaseSensitive.js) |
+| Q06 | Find Largest Number Using Math.max() | [Open File](./Q06-FindLargestNumberUsingMath.js) |
+| Q07 | Find Largest Number Without Math.max() | [Open File](./Q07-FindLargestNumber.js) |
+| Q08 | Remove Duplicates Using Set | [Open File](./Q08-RemoveDuplicatesUsingSet.js) |
+| Q09 | FizzBuzz | [Open File](./Q09-FizzBuzz.js) |
+| Q10 | Count Letter A | [Open File](./Q10-CountLetterA.js) |
+| Q11 | Check Anagram | [Open File](./Q11-CheckAnagram.js) |
+| Q12 | Count Vowels | [Open File](./Q12-CountVowels.js) |
+| Q13 | Count Letters After Removing Spaces | [Open File](./Q13-CountLetter.js) |
+| Q14 | Count Uppercase Letters | [Open File](./Q14-CountUppercaseLetters.js) |
+| Q15 | Find Smallest Number | [Open File](./Q15-FindSmallestInArray.js) |
+| Q16 | Find Second Largest Number | [Open File](./Q16-FindSecondLargestNumber.js) |
+| Q17 | Count Frequency of Array Elements | [Open File](./Q17-CountFrequencyOfArrayElements.js) |
+| Q18 | Find Duplicate Elements | [Open File](./Q18-FindDuplicateElements.js) |
+| Q19 | Find Missing Number | [Open File](./Q19-FindMissingNumberInArray.js) |
+| Q20 | Sum of Array Elements | [Open File](./Q20-SumOfArrayElements.js) |
+| Q21 | Find Average of Array | [Open File](./Q21-FindAverageOfArray.js) |
+| Q22 | Count Positive and Negative Numbers | [Open File](./Q22-CountPositiveAndNegativeNumbers.js) |
+| Q23 | Find Largest and Smallest Number | [Open File](./Q23-FindLargestAndSmallestNumber.js) |
+| Q24 | Remove Spaces From String | [Open File](./Q24-RemoveSpacesFromString.js) |
+| Q25 | Count Words in String | [Open File](./Q25-CountWordsInString.js) |
+| Q26 | Find Duplicate Characters | [Open File](./Q26-FindDuplicateCharactersInString.js) |
+| Q27 | Find First Non-Repeating Character | [Open File](./Q27-FindFirstNonRepeatingCharacter.js) |
+| Q28 | Check Prime Number | [Open File](./Q28-CheckPrimeNumber.js) |
+| Q29 | Find Factorial | [Open File](./Q29-FindFactorialOfNumber.js) |
+| Q30 | Fibonacci Series | [Open File](./Q30-FibonacciSeries.js) |
+| Q31 | Swap Two Numbers With and Without Third Variable | [Open File](./Q31-SwapTwoNumbersWithoutThirdVariable.js) |
+| Q32 | Check Armstrong Number | [Open File](./Q32-CheckArmstrongNumber.js) |
+| Q33 | Reverse Number | [Open File](./Q33-ReverseNumber.js) |
+| Q34 | Sum of Digits | [Open File](./Q34-SumOfDigits.js) |
+| Q35 | Check Palindrome Number | [Open File](./Q35-CheckPalindromeNumber.js) |
+| Q36 | Find Common Elements in Two Arrays | [Open File](./Q36-FindElementInTwoArrays.js) |
+| Q37 | Check Two Arrays Are Equal | [Open File](./Q37-CheckTwoArraysAreEqual.js) |
+| Q38 | Find Elements in First Array but Not Second | [Open File](./Q38-FindElementPresentInOneArrayNotAnother.js) |
+| Q39 | Find Longest Word | [Open File](./Q39-FindLongestWordInString.js) |
+| Q40 | Count Character Frequency | [Open File](./Q40-CountCharacterFrequency.js) |
+| Q41 | Remove Duplicates Without Set | [Open File](./Q41-FindDuplicateElementsWithoutSet.js) |
+| Q42 | Find Second Smallest Number | [Open File](./Q42-FindSecondSmallestNumber.js) |
 
-## Study Order
+## Practice Method
 
-Practice the programs in the same order as listed above. The filenames are also numbered in the same sequence, so it is easier to find and revise a specific question.
+Read the question -> understand the logic -> close the file -> write it yourself in VS Code -> run it -> compare with the solution.
+
+For interview preparation, focus on understanding **why each condition, loop and variable is used**, rather than memorizing the code.

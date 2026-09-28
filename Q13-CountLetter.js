@@ -1,68 +1,38 @@
-// Question:
-// Write a JavaScript program to count the number of letters in a string
-// by removing spaces.
+let str = "Hey h";
 
-// Example:
-// "Hey h"
-// Remove space → "Heyh"
-// Count letters → 4
+let count = 0;
 
+for (let i = 0; i < str.length; i++) {
 
-function countLetters(str) {
-
-    // Step 1: Split the string wherever a space is found.
-    //
-    // Example:
-    // "Hey h"
-    // split(' ') creates:
-    // ["Hey", "h"]
-    
-    // Step 2: Join all parts without spaces.
-    //
-    // ["Hey", "h"]
-    // join('')
-    // "Heyh"
-    //
-    // Step 3: Find the length of the final string.
-    return str.split(' ').join('').length;
+    if (str[i] !== " ") {
+        count++;
+    }
 }
 
-
-// Test Case
-console.log(countLetters("Hey h"));
-
-
+console.log(count);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Input:
-"Hey h"
+I check every character in the string.
 
+If the character is not a space, I increase the count.
 
-Step 1:
-split(' ')
+IMPORTANT KEYWORDS
 
-"Hey h"
-   ↓
-["Hey", "h"]
+!==
+-> Strict not-equal operator.
 
+str[i]
+-> Gets the current character.
 
-Step 2:
-join('')
+count++
+-> Increases the counter.
 
-["Hey", "h"]
-      ↓
-"Heyh"
-
-
-Step 3:
 length
+-> Gives the string length.
 
-"H e y h"
- 1 2 3 4
+FLOW
 
-
-Output:
-4
+String -> check each character -> not a space? -> count++
 */

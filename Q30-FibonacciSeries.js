@@ -1,80 +1,40 @@
-// Question:
-// Write a JavaScript program to print
-// Fibonacci series.
+let n = 7;
 
-// Fibonacci:
-// 0, 1, 1, 2, 3, 5, 8...
+let a = 0;
+let b = 1;
 
+for (let i = 0; i < n; i++) {
 
-function fibonacci(n) {
+    console.log(a);
 
-    // Step 1:
-    // Initialize first two Fibonacci numbers.
-    let a = 0;
-    let b = 1;
+    let next = a + b;
 
-
-    // Step 2:
-    // Repeat n times.
-    for(let i = 0; i < n; i++) {
-
-        // Print current number.
-        console.log(a);
-
-
-        // Step 3:
-        // Calculate next Fibonacci number.
-        let next = a + b;
-
-
-        // Move values forward.
-        a = b;
-        b = next;
-    }
+    a = b;
+    b = next;
 }
 
-
-fibonacci(7);
-
-
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Initial:
-a = 0
-b = 1
+I keep the first two Fibonacci values in a and b.
 
-Iteration 1:
-print 0
-next = 0 + 1 = 1
-a = 1
-b = 1
+I print a, calculate the next value using a + b, and then move the values forward.
 
-Iteration 2:
-print 1
-next = 1 + 1 = 2
-a = 1
-b = 2
+IMPORTANT KEYWORDS
 
-Iteration 3:
-print 1
-next = 1 + 2 = 3
-a = 2
-b = 3
+next
+-> Stores the next Fibonacci value.
 
-Then:
+=
+-> Assignment operator.
 
-2
-3
-5
-8
++
+-> Addition operator.
 
-Output:
-0
-1
-1
-2
-3
-5
-8
+for
+-> Repeats the series.
+
+FLOW
+
+a=0, b=1 -> print a -> next=a+b -> shift values -> repeat
 */

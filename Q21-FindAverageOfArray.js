@@ -1,53 +1,37 @@
-// Question:
-// Write a JavaScript program to find the average
-// of numbers in an array.
+let numbers = [10, 20, 30, 40];
 
-// Formula:
-// Average = Sum / Number of elements
+let sum = 0;
 
-
-function findAverage(arr) {
-
-    // Step 1:
-    // Initialize sum with 0.
-    let sum = 0;
-
-
-    // Step 2:
-    // Calculate the sum of all elements.
-    for(let num of arr) {
-
-        sum += num;
-    }
-
-
-    // Step 3:
-    // Divide sum by array length
-    // to get the average.
-    return sum / arr.length;
+for (let num of numbers) {
+    sum = sum + num;
 }
 
+let average = sum / numbers.length;
 
-console.log(findAverage([10,20,30,40]));
-
+console.log(average);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Array:
-[10,20,30,40]
+I first calculate the sum of all array elements.
 
-Sum:
-10 + 20 + 30 + 40
-= 100
+Then I divide the sum by the number of elements to get the average.
 
-Number of elements:
-4
+IMPORTANT KEYWORDS
 
-Average:
-100 / 4
-= 25
+length
+-> Number of array elements.
 
-Output:
-25
+/
+-> Division operator.
+
+for...of
+-> Loops through array values.
+
+average
+-> Stores the final average.
+
+FLOW
+
+Array -> calculate sum -> divide by length -> average
 */

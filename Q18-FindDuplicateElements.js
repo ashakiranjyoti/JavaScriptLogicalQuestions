@@ -1,73 +1,38 @@
-// Question:
-// Write a JavaScript program to find duplicate elements
-// from an array.
+let numbers = [1, 2, 3, 2, 4, 3];
 
+let seen = new Set();
 
-function findDuplicates(arr) {
+for (let num of numbers) {
 
-    let duplicates = [];
-    let seen = {};
-
-
-    for(let i = 0; i < arr.length; i++) {
-
-
-        if(seen[arr[i]]) {
-
-            duplicates.push(arr[i]);
-
-        }
-
-        else {
-
-            seen[arr[i]] = true;
-        }
+    if (seen.has(num)) {
+        console.log(num);
+    } else {
+        seen.add(num);
     }
-
-
-    return duplicates;
 }
-
-
-console.log(findDuplicates([1,2,3,2,4,3]));
-
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-1 → seen
-{
-1:true
-}
+I use a Set to store the numbers that I have already seen.
 
+If the number is already in the Set, it is a duplicate.
 
-2 → seen
-{
-1:true,
-2:true
-}
+IMPORTANT KEYWORDS
 
+Set
+-> Stores unique values.
 
-3 → seen
-{
-1:true,
-2:true,
-3:true
-}
+has()
+-> Checks whether a value exists in the Set.
 
+add()
+-> Adds a value to the Set.
 
-2 found again
+for...of
+-> Loops through array values.
 
-duplicates:
-[2]
+FLOW
 
-
-3 found again
-
-duplicates:
-[2,3]
-
-
-Output:
-[2,3]
+Number -> already in Set? -> yes: duplicate -> no: add
 */

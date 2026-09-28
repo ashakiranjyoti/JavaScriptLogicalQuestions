@@ -1,40 +1,33 @@
-// Question:
-// Write a JavaScript program to find
-// the second smallest number in an array.
+let numbers = [10, 5, 20, 3, 8];
 
+numbers.sort((a, b) => a - b);
 
-function secondSmallest(arr) {
+let secondSmallest = numbers[1];
 
-    // Step 1:
-    // Sort numbers in ascending order.
-    let sorted = [...arr].sort((a, b) => a - b);
-
-
-    // Step 2:
-    // Return element at index 1.
-    return sorted[1];
-}
-
-
-console.log(secondSmallest([10,5,20,3,8]));
-
+console.log(secondSmallest);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Original:
-[10,5,20,3,8]
+I sort the array in ascending order.
 
-After sorting:
-[3,5,8,10,20]
+After sorting, index 0 is the smallest value and index 1 is the second smallest value.
 
-Index:
-0 → 3
-1 → 5
+IMPORTANT KEYWORDS
 
-Second smallest:
-5
+sort()
+-> Sorts the array.
 
-Output:
-5
+(a, b) => a - b
+-> Numeric ascending sort.
+
+[1]
+-> Second array position because indexing starts from 0.
+
+let
+-> Declares a variable.
+
+FLOW
+
+Array -> sort ascending -> index 0 smallest -> index 1 second smallest
 */

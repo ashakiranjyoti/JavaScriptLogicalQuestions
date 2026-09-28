@@ -1,89 +1,44 @@
-// Question:
-// Write a JavaScript program to find both
-// the largest and smallest number in an array.
+let numbers = [25, 10, 45, 5, 30];
 
+let smallest = numbers[0];
+let largest = numbers[0];
 
-function findMinMax(arr) {
+for (let num of numbers) {
 
-    // Step 1:
-    // Assume first element is both
-    // smallest and largest.
-    let smallest = arr[0];
-    let largest = arr[0];
-
-
-    // Step 2:
-    // Compare every element with
-    // smallest and largest.
-    for(let num of arr) {
-
-        // If current number is smaller,
-        // update smallest.
-        if(num < smallest) {
-
-            smallest = num;
-        }
-
-
-        // If current number is larger,
-        // update largest.
-        if(num > largest) {
-
-            largest = num;
-        }
+    if (num < smallest) {
+        smallest = num;
     }
 
-
-    // Step 3:
-    // Return smallest and largest.
-    return {
-        smallest: smallest,
-        largest: largest
-    };
+    if (num > largest) {
+        largest = num;
+    }
 }
 
-
-console.log(findMinMax([25,10,45,5,30]));
-
+console.log("Smallest: " + smallest);
+console.log("Largest: " + largest);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Array:
-[25,10,45,5,30]
+I use the first value as both the smallest and largest.
 
-Initial:
-smallest = 25
-largest = 25
+Then I compare every number and update the correct variable.
 
+IMPORTANT KEYWORDS
 
-10:
-10 < 25
-smallest = 10
+smallest
+-> Stores the current smallest value.
 
+largest
+-> Stores the current largest value.
 
-45:
-45 > 25
-largest = 45
+if
+-> Checks a condition.
 
+for...of
+-> Loops through array values.
 
-5:
-5 < 10
-smallest = 5
+FLOW
 
-
-30:
-30 < 45
-No change
-
-
-Final:
-smallest = 5
-largest = 45
-
-Output:
-{
-    smallest: 5,
-    largest: 45
-}
+First value -> compare for smallest -> compare for largest -> update
 */

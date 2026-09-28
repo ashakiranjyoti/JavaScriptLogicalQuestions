@@ -1,66 +1,41 @@
-// Question:
-// Write a JavaScript program to count the frequency
-// of each character in a string.
-//
-// Example:
-// "hello"
-//
-// h → 1
-// e → 1
-// l → 2
-// o → 1
+let str = "hello";
 
+let frequency = {};
 
-function countCharacterFrequency(str) {
+for (let ch of str) {
 
-    // Step 1:
-    // Create object to store character frequency.
-    let frequency = {};
-
-
-    // Step 2:
-    // Traverse through every character.
-    for(let char of str) {
-
-        // If character exists,
-        // increase its count.
-        if(frequency[char]) {
-
-            frequency[char]++;
-        }
-
-        // Otherwise initialize count with 1.
-        else {
-
-            frequency[char] = 1;
-        }
+    if (frequency[ch]) {
+        frequency[ch]++;
+    } else {
+        frequency[ch] = 1;
     }
-
-
-    // Step 3:
-    // Return frequency object.
-    return frequency;
 }
 
-
-console.log(countCharacterFrequency("hello"));
-
+console.log(frequency);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-h → 1
-e → 1
-l → 1
-l → 2
-o → 1
+I use an object to store each character and its frequency.
 
-Output:
+If the character already exists, I increase its count.
+Otherwise, I add it with count 1.
 
-{
-    h: 1,
-    e: 1,
-    l: 2,
-    o: 1
-}
+IMPORTANT KEYWORDS
+
+object
+-> Stores key-value data.
+
+for...of
+-> Loops through characters.
+
+frequency[ch]
+-> Stores the count for a character.
+
+++
+-> Increases the count.
+
+FLOW
+
+Character -> key exists? -> increase count / add 1
 */

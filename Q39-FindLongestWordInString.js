@@ -1,61 +1,42 @@
-// Question:
-// Write a JavaScript program to find
-// the longest word in a string.
-//
-// Example:
-// "I am learning JavaScript"
-// Longest word → JavaScript
+let str = "I am learning JavaScript";
 
+let words = str.split(" ");
 
-function findLongestWord(str) {
+let longest = words[0];
 
-    // Step 1:
-    // Split string into individual words.
-    let words = str.split(" ");
+for (let word of words) {
 
-
-    // Step 2:
-    // Assume first word is longest.
-    let longest = words[0];
-
-
-    // Step 3:
-    // Compare length of every word.
-    for(let word of words) {
-
-        if(word.length > longest.length) {
-
-            longest = word;
-        }
+    if (word.length > longest.length) {
+        longest = word;
     }
-
-
-    // Step 4:
-    // Return longest word.
-    return longest;
 }
 
-
-console.log(findLongestWord(
-    "I am learning JavaScript"
-));
-
+console.log(longest);
 
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-Words:
+I split the sentence into separate words.
 
-I
-am
-learning
-JavaScript
+I assume the first word is the longest.
 
-I → length 1
-am → length 2 → longest
-learning → length 8 → longest
-JavaScript → length 10 → longest
+Then I compare the length of each word and update longest when I find a bigger word.
 
-Output:
-JavaScript
+IMPORTANT KEYWORDS
+
+split()
+-> Splits the sentence into words.
+
+length
+-> Gives the length of a string.
+
+for...of
+-> Loops through each word.
+
+longest
+-> Stores the current longest word.
+
+FLOW
+
+Sentence -> split into words -> compare lengths -> longest word
 */

@@ -1,56 +1,47 @@
-// Question:
-// Write a JavaScript program to find elements
-// that are present in the first array
-// but not present in the second array.
-//
-// Example:
-// [1,2,3,4]
-// [2,4]
-//
-// Result:
-// [1,3]
+let arr1 = [1, 2, 3, 4];
+let arr2 = [2, 4];
 
+console.log("Elements only in first array:");
 
-function findDifference(arr1, arr2) {
+for (let i = 0; i < arr1.length; i++) {
 
-    // Step 1:
-    // Create array to store differences.
-    let result = [];
+    let found = false;
 
+    for (let j = 0; j < arr2.length; j++) {
 
-    // Step 2:
-    // Traverse first array.
-    for(let num of arr1) {
-
-        // If element does not exist
-        // in second array, add it.
-        if(!arr2.includes(num)) {
-
-            result.push(num);
+        if (arr1[i] === arr2[j]) {
+            found = true;
+            break;
         }
     }
 
-
-    // Step 3:
-    // Return result.
-    return result;
+    if (!found) {
+        console.log(arr1[i]);
+    }
 }
 
-
-console.log(findDifference(
-    [1,2,3,4],
-    [2,4]
-));
-
-
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-1 → exists in arr2? No → add 1
-2 → exists? Yes → skip
-3 → exists? No → add 3
-4 → exists? Yes → skip
+For every value in the first array, I search for the same value in the second array.
 
-Output:
-[1,3]
+If the value is not found, I print it.
+
+IMPORTANT KEYWORDS
+
+found
+-> Stores whether a match was found.
+
+false / true
+-> Boolean values.
+
+!
+-> Logical NOT.
+
+break
+-> Stops the inner loop after a match.
+
+FLOW
+
+First array value -> search second array -> found? -> no: print
 */

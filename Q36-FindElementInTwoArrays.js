@@ -1,61 +1,41 @@
-// Question:
-// Write a JavaScript program to find common elements
-// between two arrays.
-//
-// Example:
-// [1,2,3,4]
-// [3,4,5,6]
-//
-// Common → [3,4]
+let arr1 = [1, 2, 3, 4];
+let arr2 = [3, 4, 5, 6];
 
+console.log("Common elements:");
 
-function findCommonElements(arr1, arr2) {
+for (let i = 0; i < arr1.length; i++) {
 
-    // Step 1:
-    // Create an array to store common elements.
-    let common = [];
+    for (let j = 0; j < arr2.length; j++) {
 
-
-    // Step 2:
-    // Traverse through first array.
-    for(let num of arr1) {
-
-        // Check whether current element
-        // exists in second array.
-        if(arr2.includes(num)) {
-
-            // Add common element.
-            common.push(num);
+        if (arr1[i] === arr2[j]) {
+            console.log(arr1[i]);
+            break;
         }
     }
-
-
-    // Step 3:
-    // Return common elements.
-    return common;
 }
 
-
-console.log(findCommonElements(
-    [1,2,3,4],
-    [3,4,5,6]
-));
-
-
 /*
-Dry Run:
+HOW THIS FILE WORKS
 
-arr1:
-[1,2,3,4]
+I compare every element of the first array with every element of the second array.
 
-arr2:
-[3,4,5,6]
+When the values match, I print the common element.
 
-1 → exists in arr2? No
-2 → exists in arr2? No
-3 → exists in arr2? Yes → add 3
-4 → exists in arr2? Yes → add 4
+IMPORTANT KEYWORDS
 
-Output:
-[3,4]
+nested for
+-> A loop inside another loop.
+
+===
+-> Strict comparison.
+
+break
+-> Stops the inner loop.
+
+arr1[i]
+-> Current value from the first array.
+
+FLOW
+
+First array value -> search second array -> match? -> print
 */

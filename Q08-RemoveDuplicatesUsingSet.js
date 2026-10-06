@@ -1,8 +1,25 @@
+// Using Set
 let numbers = [4, 8, 2, 4, 3, 9, 2];
 
 let unique = [...new Set(numbers)];
 
 console.log(unique);
+
+// *********************************************
+
+// Without Using Set
+
+let numbers = [1, 1, 2, 3];
+
+let unique = [];
+
+for (let i = 0; i < numbers.length; i++) {
+  if (!unique.includes(numbers[i])) {
+    unique.push(numbers[i])
+  }
+}
+
+console.log(unique)
 
 /*
 HOW THIS FILE WORKS

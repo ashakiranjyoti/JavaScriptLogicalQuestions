@@ -1,21 +1,13 @@
 let num = 7;
+let count = 0;
 
-let prime = true;
-
-if (num <= 1) {
-    prime = false;
-} else {
-
-    for (let i = 2; i < num; i++) {
-
-        if (num % i === 0) {
-            prime = false;
-            break;
-        }
+for (let i = 1; i <= num; i++) {
+    if (num % i === 0) {
+        count++;
     }
 }
 
-if (prime) {
+if (count === 2) {
     console.log("Prime");
 } else {
     console.log("Not Prime");
@@ -24,27 +16,29 @@ if (prime) {
 /*
 HOW THIS FILE WORKS
 
-I first handle numbers less than or equal to 1.
+I start count from 0.
 
-Then I check whether any number from 2 to num - 1 divides the number completely.
+Then I loop from 1 to num.
 
-If I find a divisor, the number is not prime.
+If any number divides num completely, I increase count.
+
+Finally, if count is exactly 2, the number is prime.
 
 IMPORTANT KEYWORDS
 
-boolean
--> In JavaScript, true and false are boolean values.
+count
+-> Stores how many numbers divide num.
 
 %
 -> Returns the remainder.
 
-break
--> Stops the loop.
+===
+-> Checks if two values are equal.
 
 prime
--> Stores whether the number is prime.
+-> A number with exactly 2 divisors (1 and itself).
 
 FLOW
 
-Number -> <=1? -> Not Prime -> otherwise check divisors -> result
+Number -> loop 1 to num -> count divisors -> count === 2? -> Prime : Not Prime
 */
